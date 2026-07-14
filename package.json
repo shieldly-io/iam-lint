@@ -1,0 +1,45 @@
+{
+  "name": "@shieldly/iam-lint",
+  "version": "1.1.0",
+  "description": "Lightweight, static-heuristic AWS IAM policy linter — no network, no AWS SDK dependency",
+  "license": "MIT",
+  "homepage": "https://www.shieldly.io",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shieldly-io/iam-lint.git"
+  },
+  "bugs": {
+    "url": "https://github.com/shieldly-io/iam-lint/issues"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "type": "module",
+  "main": "src/index.js",
+  "exports": {
+    ".": "./src/index.js"
+  },
+  "bin": {
+    "iam-lint": "bin/iam-lint.js"
+  },
+  "files": [
+    "src/index.js",
+    "bin/iam-lint.js"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "keywords": [
+    "aws",
+    "iam",
+    "security",
+    "policy",
+    "linter",
+    "least-privilege",
+    "pre-commit",
+    "cli",
+    "shieldly"
+  ],
+  "author": "Shieldly",
+  "sideEffects": false
+}

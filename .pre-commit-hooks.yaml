@@ -1,0 +1,21 @@
+# pre-commit hook definitions for @shieldly/iam-lint
+# https://pre-commit.com
+#
+# Example usage in .pre-commit-config.yaml:
+#
+#   repos:
+#     - repo: https://github.com/shieldly-io/iam-lint
+#       rev: v1.1.0
+#       hooks:
+#         - id: iam-lint
+#           files: ^policies/.*\.json$   # scope to your IAM policy files
+#
+# JSON files without a Statement element are skipped automatically, so a broad
+# match is safe — but scoping `files` keeps runs fast.
+
+- id: iam-lint
+  name: iam-lint (AWS IAM policy linter)
+  description: Static-heuristic AWS IAM policy linter — wildcards, privilege escalation, trust policy risks. No network, no AWS SDK.
+  entry: iam-lint
+  language: node
+  types: [json]
